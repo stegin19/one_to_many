@@ -33,11 +33,11 @@ public class PersonController {
     return ResponseEntity.ok("Data Saved");
     }
 
-    @PostMapping("/personid")
-    public ResponseEntity<Person> createPerson(@RequestBody Person person){
-        Person _person = personRepository .save(new Person(person.getName(),person.getPassword()));
-        return new ResponseEntity<>(_person, HttpStatus.CREATED);
-    } 
+    // @PostMapping("/personid")
+    // public ResponseEntity<Person> createPerson(@RequestBody Person person){
+    //     Person _person = personRepository .save(new Person(person.getName(),person.getPassword()));
+    //     return new ResponseEntity<>(_person, HttpStatus.CREATED);
+    // } 
 
     @DeleteMapping("/delete")
     public ResponseEntity<HttpStatus> deleteAllPerson(){
